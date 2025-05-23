@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-string? aux;
+string aux;
 int opcion;
 do
 {
@@ -13,22 +13,17 @@ do
     Console.WriteLine("[4] Division de los numeros:");
     Console.WriteLine("[5] salir");
     aux = Console.ReadLine();
-    if (aux == null)
+    if (int.TryParse(aux, out opcion) == false)
     {
         Console.WriteLine("Ingrese una opcion valida");
         opcion = 0;
     }
-    else
-    {
-        int.TryParse(aux, out opcion);
-    }
-
     switch (opcion)
     {
         case 1:
             do
             {
-                string? auxiliar1, auxiliar2, auxiliar3;
+                string auxiliar1, auxiliar2, auxiliar3;
                 Console.WriteLine("Ingrese dos numeros");
                 auxiliar1 = Console.ReadLine();
                 auxiliar2 = Console.ReadLine();
@@ -43,7 +38,7 @@ do
                         Console.WriteLine("Ingrese numeros validos");
                     }
                 
-                Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
+                Console.WriteLine("Desea realizar otra operacion Ingrese 1 para si y ingrese 2 para No");
                 auxiliar3 = Console.ReadLine();
                 if (int.TryParse(auxiliar3, out decision) == false)
                 {
@@ -56,7 +51,7 @@ do
         case 2:
             do
             {
-                string? auxiliar1, auxiliar2, auxiliar3;
+                string auxiliar1, auxiliar2, auxiliar3;
                 Console.WriteLine("Ingrese dos numeros");
                 auxiliar1 = Console.ReadLine();
                 auxiliar2 = Console.ReadLine();
@@ -71,7 +66,7 @@ do
                     Console.WriteLine("Ingrese numeros validos");
                 }
                 
-                Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
+                Console.WriteLine("Desea realizar otra operacion Ingrese 1 para si y ingrese 2 para No");
                 auxiliar3 = Console.ReadLine();
                 if (int.TryParse(auxiliar3, out decision) == false)
                 {
@@ -84,7 +79,7 @@ do
         case 3:
             do
             {
-                string? auxiliar1, auxiliar2, auxiliar3;
+                string auxiliar1, auxiliar2, auxiliar3;
                 Console.WriteLine("Ingrese dos numeros");
                 auxiliar1 = Console.ReadLine();
                 auxiliar2 = Console.ReadLine();
@@ -99,7 +94,7 @@ do
                     Console.WriteLine("Ingrese numeros validos");
                 }
                 
-                Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
+                Console.WriteLine("Desea realizar otra operacion Ingrese 1 para si y ingrese 2 para No");
                 auxiliar3 = Console.ReadLine();
                 if (int.TryParse(auxiliar3, out decision) == false)
                 {
@@ -113,7 +108,7 @@ do
         case 4:
     do
     {
-        string? auxiliar1, auxiliar2, auxiliar3;
+        string auxiliar1, auxiliar2, auxiliar3;
         Console.WriteLine("Ingrese dos numeros");
         auxiliar1 = Console.ReadLine();
         auxiliar2 = Console.ReadLine();
@@ -134,7 +129,7 @@ do
         {
             Console.WriteLine("Ingrese numeros validos");
         }
-        Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
+        Console.WriteLine("Desea realizar otra operacion Ingrese 1 para si y ingrese 2 para No");
         auxiliar3 = Console.ReadLine();
         if (int.TryParse(auxiliar3, out decision) == false)
         {
