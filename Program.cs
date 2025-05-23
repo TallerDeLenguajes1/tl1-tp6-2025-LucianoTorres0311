@@ -33,12 +33,6 @@ do
                 auxiliar1 = Console.ReadLine();
                 auxiliar2 = Console.ReadLine();
                 int num1, num2;
-                if (auxiliar1 == null || auxiliar2 == null)
-                {
-                    Console.WriteLine("Ingrese numeros validos");
-                }
-                else
-                {
                     if (int.TryParse(auxiliar1, out num1) != false && int.TryParse(auxiliar2, out num2) != false)
                     {
                         resultado = num1 + num2;
@@ -48,22 +42,15 @@ do
                     {
                         Console.WriteLine("Ingrese numeros validos");
                     }
-                }
+                
                 Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
                 auxiliar3 = Console.ReadLine();
-                if (auxiliar3 == null)
+                if (int.TryParse(auxiliar3, out decision) == false)
                 {
-                    Console.WriteLine("Ingrese una decision valida");
-                    decision = 0;
-                }
-                else
-                {
-                    if (int.TryParse(auxiliar3, out decision) == false)
-                    {
                         Console.WriteLine("Ingrese una decision valida");
                         decision = 0;
-                    }
                 }
+                
             } while (decision != 2);
             break;
         case 2:
@@ -74,37 +61,24 @@ do
                 auxiliar1 = Console.ReadLine();
                 auxiliar2 = Console.ReadLine();
                 int num1, num2;
-                if (auxiliar1 == null || auxiliar2 == null)
+                if (int.TryParse(auxiliar1, out num1) != false && int.TryParse(auxiliar2, out num2) != false)
+                {
+                    resultado = num1 - num2;
+                    Console.WriteLine("El resultado de la resta es:" + resultado);
+                }
+                else
                 {
                     Console.WriteLine("Ingrese numeros validos");
                 }
-                else
-                {
-                    if (int.TryParse(auxiliar1, out num1) != false && int.TryParse(auxiliar2, out num2) != false)
-                    {
-                        resultado = num1 - num2;
-                        Console.WriteLine("El resultado de la resta es:" + resultado);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ingrese numeros validos");
-                    }
-                }
+                
                 Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
                 auxiliar3 = Console.ReadLine();
-                if (auxiliar3 == null)
+                if (int.TryParse(auxiliar3, out decision) == false)
                 {
-                    Console.WriteLine("Ingrese una decision valida");
-                    decision = 0;
-                }
-                else
-                {
-                    if (int.TryParse(auxiliar3, out decision) == false)
-                    {
                         Console.WriteLine("Ingrese una decision valida");
                         decision = 0;
-                    }
                 }
+                
             } while (decision != 2);
             break;
         case 3:
@@ -115,88 +89,59 @@ do
                 auxiliar1 = Console.ReadLine();
                 auxiliar2 = Console.ReadLine();
                 int num1, num2;
-                if (auxiliar1 == null || auxiliar2 == null)
+                if (int.TryParse(auxiliar1, out num1) != false && int.TryParse(auxiliar2, out num2) != false)
+                {
+                    resultado = num1 * num2;
+                    Console.WriteLine("El resultado de la multiplicacion es:" + resultado);
+                }
+                else
                 {
                     Console.WriteLine("Ingrese numeros validos");
                 }
-                else
-                {
-                    if (int.TryParse(auxiliar1, out num1) != false && int.TryParse(auxiliar2, out num2) != false)
-                    {
-                        resultado = num1 * num2;
-                        Console.WriteLine("El resultado de la multiplicacion es:" + resultado);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ingrese numeros validos");
-                    }
-                }
+                
                 Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
                 auxiliar3 = Console.ReadLine();
-                if (auxiliar3 == null)
+                if (int.TryParse(auxiliar3, out decision) == false)
                 {
-                    Console.WriteLine("Ingrese una decision valida");
-                    decision = 0;
+                Console.WriteLine("Ingrese una decision valida");
+                decision = 0;
                 }
-                else
-                {
-                    if (int.TryParse(auxiliar3, out decision) == false)
-                    {
-                        Console.WriteLine("Ingrese una decision valida");
-                        decision = 0;
-                    }
-                }
+                
             } while (decision != 2);
             break;
 
         case 4:
-            do
+    do
+    {
+        string? auxiliar1, auxiliar2, auxiliar3;
+        Console.WriteLine("Ingrese dos numeros");
+        auxiliar1 = Console.ReadLine();
+        auxiliar2 = Console.ReadLine();
+        int num1, num2;
+        if (int.TryParse(auxiliar1, out num1) != false && int.TryParse(auxiliar2, out num2) != false)
+        {
+            if (num2 != 0)
             {
-                string? auxiliar1, auxiliar2, auxiliar3;
-                Console.WriteLine("Ingrese dos numeros");
-                auxiliar1 = Console.ReadLine();
-                auxiliar2 = Console.ReadLine();
-                int num1, num2;
-                if (auxiliar1 == null || auxiliar2 == null)
-                {
-                    Console.WriteLine("Ingrese numeros validos");
-                }
-                else
-                {
-                    if (int.TryParse(auxiliar1, out num1) != false && int.TryParse(auxiliar2, out num2) != false)
-                    {
-                        if (num2 != 0)
-                        {
-                            resultado = num1 / num2;
-                            Console.WriteLine("El resultado de la division es:" + resultado);
-                        }
-                        else
-                        {
-                            Console.WriteLine("No se puede dividir por 0");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ingrese numeros validos");
-                    }
-                }
-                Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
-                auxiliar3 = Console.ReadLine();
-                if (auxiliar3 == null)
-                {
-                    Console.WriteLine("Ingrese una decision valida");
-                    decision = 0;
-                }
-                else
-                {
-                    if (int.TryParse(auxiliar3, out decision) == false)
-                    {
-                        Console.WriteLine("Ingrese una decision valida");
-                        decision = 0;
-                    }
-
-                }
-            } while (decision != 2);
-             break;
+                resultado = num1 / num2;
+                Console.WriteLine("El resultado de la division es:" + resultado);
+            }
+            else
+            {
+                Console.WriteLine("No se puede dividir por 0");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ingrese numeros validos");
+        }
+        Console.WriteLine("Desea realizar otra operacion? Ingrese 1 para si y ingrese 2 para No");
+        auxiliar3 = Console.ReadLine();
+        if (int.TryParse(auxiliar3, out decision) == false)
+        {
+            Console.WriteLine("Ingrese una decision valida");
+            decision = 0;
+        }
+        } while (decision != 2);
+        break;
     }
 } while (opcion != 5);
